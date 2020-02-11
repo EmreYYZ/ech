@@ -4,7 +4,20 @@
   <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
+
+      <!-- Asset management system -->
+      <a-assets>
+        <!-- <a-asset-item id="horse-obj" src="horse.obj"></a-asset-item>
+        <a-asset-item id="horse-mtl" src="horse.mtl"></a-asset-item>
+        <a-mixin id="giant" scale="5 5 5"></a-mixin>
+        <audio id="neigh" src="neigh.mp3"></audio> -->
+        <img id="dog" src="img/dog.jpg" />
+        <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
+      </a-assets>
+
+      <!-- Scene -->
       <a-marker preset="hiro">
+        <a-plane src="#dog"></a-plane>
         <a-box position="0 0.5 0" material="color: yellow;"></a-box>
       </a-marker>
       <a-entity camera></a-entity>
