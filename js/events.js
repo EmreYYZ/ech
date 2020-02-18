@@ -19,7 +19,7 @@ document.onclick(setAtt);
 
 var imagePlane = document.getElementById("dogPlane");
 
-var secondSrc = document.getElementById("burger");
+var secondSrc = "img/Burger_Sticker.jpg";
 
 var setAtt = function() {
   imagePlane.setAttribute(src, secondSrc)
