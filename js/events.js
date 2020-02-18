@@ -18,11 +18,8 @@
 // document.onclick(setAtt);
 
 var imagePlane = document.getElementById("dogPlane");
-
 var secondSrc = "img/Burger_Sticker.jpg";
 
-var setAtt = function() {
+var setAtt = (document.querySelector("body").onclick = function() {
   imagePlane.setAttribute("src", secondSrc);
-};
-
-document.querySelector("html").onclick = setAtt();
+});
