@@ -15,7 +15,7 @@
 //   }
 // });
 
-document.onclick(setAtt);
+// document.onclick(setAtt);
 
 var imagePlane = document.getElementById("dogPlane");
 
@@ -24,3 +24,5 @@ var secondSrc = "img/Burger_Sticker.jpg";
 var setAtt = function() {
   imagePlane.setAttribute("src", secondSrc)
 }
+
+setAtt();
