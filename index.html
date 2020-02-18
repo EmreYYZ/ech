@@ -3,14 +3,9 @@
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
 
-
-
   <body style="margin : 0px; overflow: hidden;">
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; debugUIEnabled: false;"
-    >
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       <!-- Asset management system -->
       <a-assets>
         <!-- <a-asset-item id="horse-obj" src="horse.obj"></a-asset-item>
@@ -18,7 +13,7 @@
         <a-mixin id="giant" scale="5 5 5"></a-mixin>
         <audio id="neigh" src="neigh.mp3"></audio> -->
         <img id="dog" src="img/dog.jpg" />
-        <img id='burger' src='img/Burger_Sticker.jpg'/>
+        <img id="burger" src="img/Burger_Sticker.jpg" />
         <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
       </a-assets>
 
@@ -33,12 +28,17 @@
         url="img/pattern-testMarker.patt"
       >
         <!-- <a-marker preset="hiro"> -->
-        <a-plane id='dogPlane' position="0 0 0" rotation="-90 0 0" src="#dog"></a-plane>
+        <a-plane
+          id="dogPlane"
+          position="0 0 0"
+          rotation="-90 0 0"
+          src="#dog"
+        ></a-plane>
         <!-- <a-box position="0 0.5 0" material="color: yellow;"></a-box> -->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-      <!-- import events.js script -->
-  <script src="js/events.js"></script>
+    <!-- import events.js script -->
+    <script src="js/events.js"></script>
   </body>
 </html>

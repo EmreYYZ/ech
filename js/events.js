@@ -22,7 +22,7 @@ var imagePlane = document.getElementById("dogPlane");
 var secondSrc = "img/Burger_Sticker.jpg";
 
 var setAtt = function() {
-  imagePlane.setAttribute("src", secondSrc)
-}
+  imagePlane.setAttribute("src", secondSrc);
+};
 
-setAtt();
+document.querySelector("html").onclick = setAtt();
