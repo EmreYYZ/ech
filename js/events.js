@@ -15,6 +15,8 @@
 //   }
 // });
 
+document.onclick(setAtt);
+
 var imagePlane = document.getElementById("dogPlane");
 
 var secondSrc = document.getElementById("burger");
