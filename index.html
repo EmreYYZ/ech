@@ -19,6 +19,7 @@
         <a-mixin id="giant" scale="5 5 5"></a-mixin>
         <audio id="neigh" src="neigh.mp3"></audio> -->
         <img id="dog" src="img/dog.jpg" />
+        <img id='burger' src='img/Burger_Sticker.jpg'/>
         <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
       </a-assets>
 
@@ -31,6 +32,7 @@
         preset="custom"
         type="pattern"
         url="img/pattern-testMarker.patt"
+        onclick="setAtt()"
       >
         <!-- <a-marker preset="hiro"> -->
         <a-plane id='dogPlane' position="0 0 0" rotation="-90 0 0" src="#dog"></a-plane>
