@@ -41,7 +41,7 @@ AFRAME.registerComponent("markerhandler", {
         .setAttribute("src", `${assets[num].src}`);
       return;
     } else {
-      num = 0;
+      num = Math.floor(Math.random() * Math.floor(3));
     }
   }
 });
