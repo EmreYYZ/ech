@@ -36,7 +36,8 @@ AFRAME.registerComponent("markerhandler", {
   tick: function() {
     if (document.querySelector("a-marker").object3D.visible == true) {
       let num = Math.floor(Math.random() * Math.floor(3));
-      document.querySelector("a-plane").setAttribute("src", `${assets[num].src}`)
+      document.querySelector("a-plane").setAttribute("src", `${assets[num].src}`);
+      return;
     } else {
       num = 0;
     }
