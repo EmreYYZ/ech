@@ -58,18 +58,23 @@ let assets = [
   }
 ];
 
-let num = 0;
+let num = 1;
+
+let randomNum = (num) => {
+  num = Math.floor(Math.random() * Math.floor(3));
+  return num;
+}
 
 AFRAME.registerComponent("markerhandler", {
   function() {
+    randomNum();
     if (document.querySelector("a-marker").object3D.visible == true) {
-      num = Math.floor(Math.random() * Math.floor(3));
       document
         .querySelector("a-plane")
         .setAttribute("src", `${assets[num].src}`);
       return;
     } else {
-      num = Math.floor(Math.random() * Math.floor(3));
+      randomNum();
       return;
     };
   }
