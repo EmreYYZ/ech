@@ -58,9 +58,9 @@ let assets = [
   }
 ];
 
-let num = 1;
 
-let randomNum = (num) => {
+let randomNum = () => {
+  let num = 1;
   num = Math.floor(Math.random() * Math.floor(3));
   return num;
 }
