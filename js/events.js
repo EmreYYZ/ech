@@ -32,16 +32,17 @@ let assets = [
   }
 ];
 
+let num = Math.floor(Math.random() * Math.floor(3));
+
 AFRAME.registerComponent("markerhandler", {
   tick: function() {
-    let num = Math.floor(Math.random() * Math.floor(3));
     if (document.querySelector("a-marker").object3D.visible == true) {
       document
         .querySelector("a-plane")
         .setAttribute("src", `${assets[num].src}`);
         return;
     } else {
-      return false;
+      num = Math.floor(Math.random() * Math.floor(3));
     }
   }
 });
