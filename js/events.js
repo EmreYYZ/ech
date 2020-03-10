@@ -32,7 +32,8 @@ let assets = [
   }
 ];
 
-let num = Math.floor(Math.random() * Math.floor(3));
+let previousNum;
+let num = Math.floor(Math.random() * Math.floor(assets.length));
 
 AFRAME.registerComponent("markerhandler", {
   tick: function() {
@@ -42,7 +43,12 @@ AFRAME.registerComponent("markerhandler", {
         .setAttribute("src", `${assets[num].src}`);
         return;
     } else {
+      previousNum = num;
       num = Math.floor(Math.random() * Math.floor(3));
+      if (num == previousNum) {
+        num = Math.floor(Math.random() * Math.floor(3));
+      }
+      return num;
     }
   }
 });
