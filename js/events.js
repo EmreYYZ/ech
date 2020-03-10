@@ -58,10 +58,12 @@ let assets = [
   }
 ];
 
+let num = 0;
+
 AFRAME.registerComponent("markerhandler", {
   function() {
     if (document.querySelector("a-marker").object3D.visible == true) {
-      let num = Math.floor(Math.random() * Math.floor(3));
+      num = Math.floor(Math.random() * Math.floor(3));
       document
         .querySelector("a-plane")
         .setAttribute("src", `${assets[num].src}`);
