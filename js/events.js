@@ -66,7 +66,7 @@ let randomNum = (num) => {
 }
 
 AFRAME.registerComponent("markerhandler", {
-  init: function() {
+  tick: function() {
     randomNum();
     if (document.querySelector("a-marker").object3D.visible == true) {
       document
