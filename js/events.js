@@ -32,6 +32,32 @@ let assets = [
   }
 ];
 
+// AFRAME.registerComponent("markerhandler", {
+//   tick: function() {
+//     if (document.querySelector("a-marker").object3D.visible == true) {
+//       let num = Math.floor(Math.random() * Math.floor(3));
+//       document.querySelector("a-plane").setAttribute("src", `${assets[num].src}`);
+//     } else {
+//       num = 0;
+//     }
+//   }
+// });
+
+let assets = [
+  {
+    id: "dog",
+    src: "img/dog.jpg"
+  },
+  {
+    id: "burger",
+    src: "img/Burger_Sticker.jpg"
+  },
+  {
+    id: "cola",
+    src: "img/ColaStickerv.jpg"
+  }
+];
+
 AFRAME.registerComponent("markerhandler", {
   function() {
     if (document.querySelector("a-marker").object3D.visible == true) {
@@ -42,6 +68,7 @@ AFRAME.registerComponent("markerhandler", {
       return;
     } else {
       num = Math.floor(Math.random() * Math.floor(3));
-    }
+      return;
+    };
   }
 });
