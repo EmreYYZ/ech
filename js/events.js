@@ -33,7 +33,7 @@ let assets = [
 ];
 
 AFRAME.registerComponent("markerhandler", {
-  init: function() {
+  function() {
     if (document.querySelector("a-marker").object3D.visible == true) {
       let num = Math.floor(Math.random() * Math.floor(3));
       document
