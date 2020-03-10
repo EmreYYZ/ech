@@ -17,20 +17,20 @@
 //   }
 // });
 
-let assets = [
-  {
-    id: "dog",
-    src: "img/dog.jpg"
-  },
-  {
-    id: "burger",
-    src: "img/Burger_Sticker.jpg"
-  },
-  {
-    id: "cola",
-    src: "img/ColaStickerv.jpg"
-  }
-];
+// let assets = [
+//   {
+//     id: "dog",
+//     src: "img/dog.jpg"
+//   },
+//   {
+//     id: "burger",
+//     src: "img/Burger_Sticker.jpg"
+//   },
+//   {
+//     id: "cola",
+//     src: "img/ColaStickerv.jpg"
+//   }
+// ];
 
 // AFRAME.registerComponent("markerhandler", {
 //   tick: function() {
@@ -72,10 +72,8 @@ AFRAME.registerComponent("markerhandler", {
       document
         .querySelector("a-plane")
         .setAttribute("src", `${assets[num].src}`);
-      return;
     } else {
       randomNum();
-      return;
     };
   }
 });
