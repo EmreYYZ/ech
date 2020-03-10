@@ -17,6 +17,32 @@
 //   }
 // });
 
+let assets = [
+  {
+    id: "dog",
+    src: "img/dog.jpg"
+  },
+  {
+    id: "burger",
+    src: "img/Burger_Sticker.jpg"
+  },
+  {
+    id: "cola",
+    src: "img/ColaStickerv.jpg"
+  }
+];
+
+AFRAME.registerComponent("markerhandler", {
+  tick: function() {
+    if (document.querySelector("a-marker").object3D.visible == true) {
+      let num = Math.floor(Math.random() * Math.floor(3));
+      document.querySelector("a-plane").setAttribute("src", `${assets[num].src}`);
+    } else {
+      num = 0;
+    }
+  }
+});
+
 // let assets = [
 //   {
 //     id: "dog",
@@ -33,49 +59,15 @@
 // ];
 
 // AFRAME.registerComponent("markerhandler", {
-//   tick: function() {
+//   function() {
 //     if (document.querySelector("a-marker").object3D.visible == true) {
 //       let num = Math.floor(Math.random() * Math.floor(3));
-//       document.querySelector("a-plane").setAttribute("src", `${assets[num].src}`);
+//       document
+//         .querySelector("a-plane")
+//         .setAttribute("src", `${assets[num].src}`);
+//       return;
 //     } else {
-//       num = 0;
+//       num = Math.floor(Math.random() * Math.floor(3));
 //     }
 //   }
 // });
-
-let assets = [
-  {
-    id: "dog",
-    src: "img/dog.jpg"
-  },
-  {
-    id: "burger",
-    src: "img/Burger_Sticker.jpg"
-  },
-  {
-    id: "cola",
-    src: "img/ColaStickerv.jpg"
-  }
-];
-
-let randomNum = () => {
-  let num = 1;
-  num = Math.floor(Math.random() * Math.floor(3));
-  return num;
-};
-
-AFRAME.registerComponent("markerhandler", {
-  tick: function() {
-    let randomNum = () => {
-      let num = 1;
-      num = Math.floor(Math.random() * Math.floor(3));
-    };
-    if (document.querySelector("a-marker").object3D.visible == true) {
-      document
-        .querySelector("a-plane")
-        .setAttribute("src", `${assets[num].src}`);
-    } else {
-      return;
-    }
-  }
-});
