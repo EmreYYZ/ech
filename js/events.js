@@ -1,22 +1,3 @@
-// AFRAME.registerComponent("markerhandler", {
-//   init: function() {
-//     const animatedMarker = document.querySelector("#animated-marker");
-//     var imagePlane = document.getElementById("dogPlane");
-//     var secondSrc = "img/Burger_Sticker.jpg";
-
-//     // every click, we make our model grow in size :)
-//     animatedMarker.addEventListener("click", function(ev, target) {
-//       const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-//       if (imagePlane && intersectedElement === imagePlane) {
-//         // const scale = aEntity.getAttribute("scale");
-//         // Object.keys(scale).forEach(key => (scale[key] = scale[key] + 1));
-//         // aEntity.setAttribute("scale", scale);
-//         imagePlane.setAttribute("src", `${secondSrc}`);
-//       }
-//     });
-//   }
-// });
-
 let assets = [
   {
     id: "dog",
@@ -32,21 +13,30 @@ let assets = [
   }
 ];
 
+// define a previous number. This will be used later.
 let previousNum;
+// define new number. This number is used as the index value for fetching artifacts from the asset array (above)
 let num = Math.floor(Math.random() * Math.floor(assets.length));
 
+// register aframe component for the marker
 AFRAME.registerComponent("markerhandler", {
+  // tick makes it refresh every frame. Is this necessary? Who knows
   tick: function() {
+    // if the marker is in view ...
     if (document.querySelector("a-marker").object3D.visible == true) {
       document
         .querySelector("a-plane")
+        // sets the src of the plane to the src value in the assets array
         .setAttribute("src", `${assets[num].src}`);
         return;
     } else {
+      // set previous number to current number
       previousNum = num;
-      num = Math.floor(Math.random() * Math.floor(3));
+      // generate a new random number
+      num = Math.floor(Math.random() * Math.floor(assets.length));
+      // if they're the same, re-roll
       if (num == previousNum) {
-        num = Math.floor(Math.random() * Math.floor(3));
+        num = Math.floor(Math.random() * Math.floor(assets.length));
       } else {
         return num;
       }
