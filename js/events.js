@@ -47,8 +47,9 @@ AFRAME.registerComponent("markerhandler", {
       num = Math.floor(Math.random() * Math.floor(3));
       if (num == previousNum) {
         num = Math.floor(Math.random() * Math.floor(3));
+      } else {
+        return num;
       }
-      return num;
     }
   }
 });
