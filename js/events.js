@@ -1,16 +1,16 @@
 let assets = [
   {
-    id: "dog",
-    src: "img/dog.jpg"
+    id: "1968",
+    src: "img/1968-france.jpg",
   },
   {
-    id: "burger",
-    src: "img/Burger_Sticker.jpg"
+    id: "2012",
+    src: "img/2012-Turkey.jpg",
   },
   {
     id: "cola",
-    src: "img/ColaStickerv.jpg"
-  }
+    src: "img/ColaStickerv.jpg",
+  },
 ];
 
 // define a previous number. This will be used later.
@@ -43,32 +43,3 @@ AFRAME.registerComponent("markerhandler", {
     }
   }
 });
-
-// let assets = [
-//   {
-//     id: "dog",
-//     src: "img/dog.jpg"
-//   },
-//   {
-//     id: "burger",
-//     src: "img/Burger_Sticker.jpg"
-//   },
-//   {
-//     id: "cola",
-//     src: "img/ColaStickerv.jpg"
-//   }
-// ];
-
-// AFRAME.registerComponent("markerhandler", {
-//   function() {
-//     if (document.querySelector("a-marker").object3D.visible == true) {
-//       let num = Math.floor(Math.random() * Math.floor(3));
-//       document
-//         .querySelector("a-plane")
-//         .setAttribute("src", `${assets[num].src}`);
-//       return;
-//     } else {
-//       num = Math.floor(Math.random() * Math.floor(3));
-//     }
-//   }
-// });
